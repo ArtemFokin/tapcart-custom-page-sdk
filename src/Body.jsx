@@ -17,7 +17,7 @@ const Body = () => {
     });
   }, [vars.isInitialized, actions]);
 
-  return <>body compontent vars: {JSON.stringify(vars)}</>;
+  return <>body compontent vars:</>;
 };
 
 export default Body;
