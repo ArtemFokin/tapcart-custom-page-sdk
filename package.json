@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
-  "homepage":"https://artemfokin.github.io/tapcart-custom-page-sdk/",
+  "homepage":"https://artemfokin.github.io/tapcart-custom-page-sdk",
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
