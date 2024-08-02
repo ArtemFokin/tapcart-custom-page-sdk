@@ -3,7 +3,7 @@ import "./styles.css";
 import { loadWebbridge, WebbridgeProvider } from "@tapcart/webbridge-react";
 import Body from "./Body";
 
-const webbridgeClient = loadWebbridge({ test: false });
+const webbridgeClient = loadWebbridge({ test: true });
 
 export default function App() {
   const [state, setState] = useState(0);
