@@ -1,4 +1,5 @@
 import { useActions, useVariables } from "@tapcart/webbridge-react";
+import { useEffect } from "react";
 
 const Body = () => {
   const vars = useVariables();
@@ -7,6 +8,15 @@ const Body = () => {
     vars,
     actions,
   });
+
+  useEffect(() => {
+    if (!vars.isInitialized) return;
+    actions.showToast({
+      message: "sucess toast",
+      type: "success",
+    });
+  }, [vars.isInitialized]);
+
   return <>body compontent vars: {JSON.stringify(vars)}</>;
 };
 
