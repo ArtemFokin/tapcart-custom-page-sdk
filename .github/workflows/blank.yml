@@ -27,7 +27,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
       
     runs-on: ubuntu-latest
     steps:
@@ -39,6 +38,8 @@ jobs:
         run: npm install
       - name: Build the React app
         run: npm run build
+        env: 
+          PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
