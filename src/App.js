@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
 import { loadWebbridge, WebbridgeProvider } from "@tapcart/webbridge-react";
+import Body from "./Body";
 
 const webbridgeClient = loadWebbridge({ test: false });
 
