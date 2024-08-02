@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
+import { loadWebbridge, WebbridgeProvider } from "@tapcart/webbridge-react";
+
+const webbridgeClient = loadWebbridge({ test: false });
 
 export default function App() {
   const [state, setState] = useState(0);
@@ -15,10 +18,13 @@ export default function App() {
     };
   }, []);
   return (
-    <div className="App">
-      <h1>
-        Tapcart device: {window.Tapcart?.device.id} - {state}
-      </h1>
-    </div>
+    <WebbridgeProvider webbridgeClient={webbridgeClient}>
+      <div className="App">
+        <h1>
+          Tapcart device: {window.Tapcart?.device.id} - {state}
+        </h1>
+        <Body />
+      </div>
+    </WebbridgeProvider>
   );
 }
