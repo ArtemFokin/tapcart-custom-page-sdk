@@ -4,14 +4,14 @@ import "./styles.css";
 export default function App() {
   const [state, setState] = useState(0);
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       console.log({
         tapcart: window.Tapcart,
       });
       setState((v) => v + 1);
     }, 1000);
     return () => {
-      clearTimeout(timer);
+      clearInterval(timer);
     };
   }, []);
   return (
