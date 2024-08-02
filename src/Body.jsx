@@ -1,8 +1,12 @@
-import { useVariables } from "@tapcart/webbridge-react";
+import { useActions, useVariables } from "@tapcart/webbridge-react";
 
 const Body = () => {
   const vars = useVariables();
-  console.log(vars);
+  const actions = useActions();
+  console.log({
+    vars,
+    actions,
+  });
   return <>body compontent vars: {JSON.stringify(vars)}</>;
 };
 
