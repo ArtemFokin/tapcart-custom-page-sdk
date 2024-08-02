@@ -10,6 +10,9 @@ export default function App() {
       });
       setState((v) => v + 1);
     }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
   return (
     <div className="App">
