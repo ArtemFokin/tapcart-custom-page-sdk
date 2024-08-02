@@ -22,7 +22,7 @@ export default function App() {
     <WebbridgeProvider webbridgeClient={webbridgeClient}>
       <div className="App">
         <h1>
-          Tapcart device: {window.Tapcart?.device.id} - {state}
+          Tapcart device: {window.Tapcart?.device?.id} - {state}
         </h1>
         <Body />
       </div>
